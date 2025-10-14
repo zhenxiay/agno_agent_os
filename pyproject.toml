@@ -1,0 +1,14 @@
+[project]
+name = "agno-agent-os"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "agno>=2.1.4",
+    "anthropic>=0.69.0",
+    "dotenv>=0.9.9",
+    "fastapi[standard]>=0.119.0",
+    "mcp>=1.17.0",
+    "sqlalchemy>=2.0.44",
+]
