@@ -56,7 +56,7 @@ research_team = Team(
         oracle_agent, 
         ms_sql_agent
         ],
-    model=AzureOpenAI(id="gpt-4.1"),
+    model=AzureOpenAI(id="gpt-4.1", api_version="2024-12-01-preview"),
     #model=Claude(id="claude-sonnet-4-5"),
     id="research_team",
     instructions=[
