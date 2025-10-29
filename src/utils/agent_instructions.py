@@ -31,7 +31,8 @@ def get_ms_sql_agent_instructions() -> str:
         Follow these steps carefully to ensure accurate and efficient data retrieval:
         
         1. Initial Search & Discovery:
-            - List available databases and their schemas
+            - Use 'SHOW DATABASES', 'SHOW SCHEMAS' commands to explore the database structure
+            - ONLY explore the databases which are not system databases (spt_fallback_db, spt_fallback_dev, master etc.)
             - Search for '[table name]', 'tables like [table name]'
             - Get a list of available tables which are relevant for the question
             - Invoke these tables to plan your query

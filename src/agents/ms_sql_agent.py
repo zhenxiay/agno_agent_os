@@ -9,6 +9,7 @@ from agno.agent import Agent
 from agno.models.anthropic import Claude
 from agno.models.azure.openai_chat import AzureOpenAI
 from agno.tools.sql import SQLTools
+from agno.tools.reasoning import ReasoningTools
 
 from utils.sqlite_memory import sqlite_db
 from utils.agent_instructions import (
@@ -61,6 +62,7 @@ def create_agent(llm: str = "claude") -> Agent:
         db=sqlite_db(),
         tools=[
             SQLTools(db_engine=get_connection_for_toolkit()),
+            ReasoningTools(add_instructions=True),
             ],
         instructions=get_ms_sql_agent_instructions(),
         expected_output=dedent(get_ms_sql_agent_output()),
